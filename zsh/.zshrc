@@ -105,16 +105,6 @@ fi
 # Fixes bug with vim/nvim
 echo '\e[5 q'
 
-alias qm="cd ~/QuantResearch/; source .venv_vbt/bin/activate;"
-alias qs="cd ~/QuantStudies/; source .venv/bin/activate; source .env;"
-alias ls="exa -lF --all --icons"
-alias pipfreezeqr="pip freeze > ~/QuantResearch/requirements.txt; sed -i -e '/-e /s/^/#/' ~/QuantResearch/requirements.txt"
-
-# ssh to AWS EC2 instance
-alias aws-ice="ssh ec2-user@54.154.93.24"
- 
-export PATH="$PATH:/opt/mssql-tools18/bin"
-
 # Source all shell files from ~/dotfiles/shell/
 # Source generic alias definitions
 if [ -f "$HOME/dotfiles/shell/alias.sh" ]; then

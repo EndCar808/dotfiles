@@ -37,4 +37,7 @@ fi
 if [ -n "$ZSH_VERSION" ]; then
 	alias zsource='source ~/.zshrc'
 	alias zconfig='nvim ~/.zshrc'
+
+	# configure exa as ls
+	alias ls="exa -lF --all --icons"
 fi
