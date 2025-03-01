@@ -1,0 +1,2 @@
+# Ignore the local alias' and env files
+shell/local_*.sh
