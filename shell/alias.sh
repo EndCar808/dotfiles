@@ -15,15 +15,11 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gm='git merge'
 
-
 # Editor
 export EDITOR="nvim"
 
 # Other generic commands
 alias h='history'
-
-# for bat
-alias bat='~/.local/bin/bat'
 
 # Edit alias and env files
 alias nvalias="nvim ~/dotfiles/shell/alias.sh"
