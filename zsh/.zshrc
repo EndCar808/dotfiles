@@ -101,47 +101,48 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# Example aliases
-alias zconfig="nvim ~/.zshrc"
-alias zsource="source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias qm="cd ~/QuantResearch/; source .venv_vbt/bin/activate;"
-alias qs="cd ~/QuantStudies/; source .venv/bin/activate; source .env;"
-alias ls="exa -lF --all --icons"
-#alias ls="ls -alF --color=auto"
-alias bat="/usr/bin/batcat"
-alias pipfreezeqr="pip freeze > ~/QuantResearch/requirements.txt; sed -i -e '/-e /s/^/#/' ~/QuantResearch/requirements.txt"
-
-# ssh to AWS EC2 instance
-alias aws-ice="ssh ec2-user@54.154.93.24"
-
-# Initialize API keys
-source ~/api_keys.sh
-
-# Add nvim to $PATH
-export PATH="$PATH:/opt/nvim-linux64/bin"
- 
-export PATH="$PATH:/opt/mssql-tools18/bin"
-
-export PATH="$PATH:~/.local/bin/bat:/usr/bin/batcat"
-
-# Format for time 
-export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
-
-# Source fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-
 # Forces cursor to vertical bar 
 # Fixes bug with vim/nvim
 echo '\e[5 q'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias qm="cd ~/QuantResearch/; source .venv_vbt/bin/activate;"
+alias qs="cd ~/QuantStudies/; source .venv/bin/activate; source .env;"
+alias ls="exa -lF --all --icons"
+alias pipfreezeqr="pip freeze > ~/QuantResearch/requirements.txt; sed -i -e '/-e /s/^/#/' ~/QuantResearch/requirements.txt"
+
+# ssh to AWS EC2 instance
+alias aws-ice="ssh ec2-user@54.154.93.24"
+ 
+export PATH="$PATH:/opt/mssql-tools18/bin"
+
+# Source all shell files from ~/dotfiles/shell/
+# Source generic alias definitions
+if [ -f "$HOME/dotfiles/shell/alias.sh" ]; then
+	source "$HOME/dotfiles/shell/alias.sh"
+fi
+
+# Source generic environment variable definitions
+if [ -f "$HOME/dotfiles/shell/env.sh" ]; then
+	source "$HOME/dotfiles/shell/env.sh"
+fi
+
+# Source local (sensitive/machine-specific) alias definitions
+if [ -f "$HOME/dotfiles/shell/local_alias.sh" ]; then
+	source "$HOME/dotfiles/shell/local_alias.sh"
+fi
+
+# Source local (sensitive/machine-specific) environment variable definitions
+if [ -f "$HOME/dotfiles/shell/local_env.sh" ]; then
+	source "$HOME/dotfiles/shell/local_env.sh"
+fi
+
+# fzf initialization
+if [ -f "$HOME/dotfiles/fzf/fzf.sh" ]; then
+  source "$HOME/dotfiles/fzf/fzf.sh"
+fi
+
+# nvm initialization - for my personal env
+if [ -n "$NVM_DIR" ]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
+fi
