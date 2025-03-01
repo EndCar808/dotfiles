@@ -123,10 +123,5 @@ if [ -f "$HOME/dotfiles/shell/local_env.sh" ]; then
 	source "$HOME/dotfiles/shell/local_env.sh"
 fi
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
-alias bat="/usr/bin/batcat"
-export PATH="$PATH:/opt/mssql-tools18/bin"
-
 # fzf initialization
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
