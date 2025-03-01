@@ -7,7 +7,7 @@ alias l='ls -CF'
 # Git shortcuts
 alias gst='git status'
 alias gpl='git pull'
-alias gp='igt push'
+alias gp='git push'
 alias gpr='git pull --rebase'
 alias gaa='git add .'
 alias gc='git commit'
