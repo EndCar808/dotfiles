@@ -124,7 +124,9 @@ if [ -f "$HOME/dotfiles/shell/local_env.sh" ]; then
 fi
 
 # fzf initialization
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ -f "$HOME/dotfiles/fzf/fzf.sh" ]; then
+  source "$HOME/dotfiles/fzf/fzf.sh"
+fi
 
 # nvm initialization - for my personal env
 if [ -n "$NVM_DIR" ]; then
