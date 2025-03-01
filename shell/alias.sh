@@ -19,3 +19,21 @@ export EDITOR="nvim"
 
 # Other generic commands
 alias h='history'
+
+# Edit alias and env files
+alias nvalias="nvim ~/dotfiles/shell/alias.sh"
+alias nvlalias='nvim ~/dotfiles/shell/local_alias.sh'
+alias nvenv='nvim ~/dotfiles/shell/env.sh'
+alias nvlenv='nvim ~/dotfiles/shell/local_env.sh'
+
+# bash specific configs
+if [ -n "$BASH_VERSION" ]; then
+	alias bsource='source ~/.bashrc'
+	alias bconfig='nvim ~/.bashrc'
+fi
+
+# zsh specific configs
+if [ -n "$ZSH_VERSION" ]; then
+	alias zsource='source ~/.zshrc'
+	alias zconfig='nvim ~/.zshrc'
+fi
