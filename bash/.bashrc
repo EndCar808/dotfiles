@@ -125,3 +125,9 @@ fi
 
 # fzf initialization
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# nvm initialization - for my personal env
+if [ -n "$NVM_DIR" ]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load NVM bash completion
+fi
