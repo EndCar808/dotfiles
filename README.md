@@ -10,13 +10,17 @@ Clone the repo to your local. Create a dotfiles back up directory, this is for m
 stow {tool}
 ```
 
-where `{tool}` is the name of the subdirectory containing the configs for the tool it is named after e.g., `stow zsh`. Otherwise you could run 
+where `{tool}` is the name of the subdirectory containing the configs for the tool it is named after e.g., `stow zsh`. Otherwise you could run
 
 ```bash
 stow .
 ```
 
 to install all symlinks to dotfiles.
+
+## Windows Terminal Setup
+
+Download [Nerd Font](https://www.nerdfonts.com/#home)
 
 ## `fzf` Setup Instructions
 
@@ -82,6 +86,8 @@ wget -O $ZSH_CUSTOM/themes/common.zsh-theme https://raw.githubusercontent.com/ja
 ```bash
 sudo apt install exa
 ```
+
+**NOTE:** `exa` requires special icons from [Nerd Font](https://www.nerdfonts.com/#home) to render some of the file icons. If you notice some of the icons don't render correctly you might have to install them.
 
 ### 6. Source `.zshrc`
 

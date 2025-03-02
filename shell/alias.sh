@@ -1,5 +1,6 @@
 # This is for common/generic alias commands
-alias ls='ls -alF --color=auto'
+# alias ls='ls -alF --color=auto'
+alias ls="exa -lF --all --icons"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -37,7 +38,4 @@ fi
 if [ -n "$ZSH_VERSION" ]; then
 	alias zsource='source ~/.zshrc'
 	alias zconfig='nvim ~/.zshrc'
-
-	# configure exa as ls
-	alias ls="exa -lF --all --icons"
 fi

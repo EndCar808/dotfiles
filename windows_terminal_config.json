@@ -43,6 +43,25 @@
                 "padding": "4",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
                 "useAcrylic": true
+            },
+            {
+                "backgroundImage": null,
+                "backgroundImageOpacity": 0.2,
+                "colorScheme": "N0tch2k",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "CaskaydiaMono Nerd Font Mono",
+                    "size": 8,
+                    "weight": "semi-light"
+                },
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "opacity": 100,
+                "padding": "4",
+                "source": "Windows.Terminal.Wsl",
+                "useAcrylic": false
             }
         ]
     },
