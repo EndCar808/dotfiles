@@ -2,6 +2,8 @@
 
 My dotfiles configurations for my personal and working environments.
 
+This readme is structured so that first are instructions on how use ``stow`` to setup symlinks using the contents of this repo. If you have all the tools contained in this repo, this is all you need to read, followed by the instructions for the `Windows Terminal` app. If you dont use this then please ignore. If one or more of these tools are not installed on your system the rest of the readme contains instructions to install them (in the context of `Ubunutu >= 20.04`) in relative order.
+
 ## Setup of dotfiles
 
 Clone the repo to your local. Create a dotfiles back up directory, this is for moving and sotring any existing dotfiles before setting up via `stow`. You must first manually install the neccessary tools - see instructions below for installation. Once everything is installed, `cd` into the dotfiles directory. Then run
@@ -20,16 +22,7 @@ to install all symlinks to dotfiles.
 
 ## Windows Terminal Setup
 
-Download [Nerd Font](https://www.nerdfonts.com/#home)
-
-## `fzf` Setup Instructions
-
-Install `fzf` via git in your `${HOME}` directory. Run the following
-
-```bash
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
+Download your choice of font from [Nerd Font](https://www.nerdfonts.com/#home). For example, `"CaskaydiaMono Nerd Font Mono"`, click download and extract all files. Type `Win + R` and type `control font` to bring up the font settings in the control panel. Drag and drop all `.ttf` or `.otf` files into the destination. Restart windows terminal app and you should see your newly installed font in the settings.
 
 ## Zsh & Oh My Zsh Setup Instructions
 
@@ -94,3 +87,34 @@ sudo apt install exa
 ```bash
 source ~/.zshrc
 ```
+
+## `fzf` Setup Instructions
+
+Install `fzf` via git in your `${HOME}` directory. Run the following
+
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+**Note:** The customiztion settings for ``fzf`` rely on `ripgrep` so you must either change or install it.
+
+## `ripgrep` Installation
+
+To install [ripgrep](https://github.com/BurntSushi/ripgrep) run
+
+```bash
+sudo apt-get install ripgrep
+```
+
+## Installing `nvim`
+
+Install `neovim` with the following
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install neovim
+```
+
+Then simply use ``stow`` to establish the symlink to the config files. Run `nvim` and the `lazyvim` installer will handle the rest.

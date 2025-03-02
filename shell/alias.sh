@@ -18,6 +18,7 @@ alias gm='git merge'
 
 # Editor
 export EDITOR="nvim"
+alias nvconfig='nvim ~/.config/nvim/init.lua'
 
 # Other generic commands
 alias h='history'
