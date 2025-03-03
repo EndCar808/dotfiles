@@ -23,6 +23,9 @@ alias nvconfig='nvim ~/.config/nvim/init.lua'
 # Other generic commands
 alias h='history'
 
+# shortcut for quickly moving to dotfiles repo
+alias dotfiles="cd ~/dotfiles/;"
+
 # Edit alias and env files
 alias nvalias="nvim ~/dotfiles/shell/alias.sh"
 alias nvlalias='nvim ~/dotfiles/shell/local_alias.sh'
