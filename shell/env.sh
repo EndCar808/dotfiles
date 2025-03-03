@@ -2,11 +2,13 @@
 
 # Updates to PATH
 export PATH="$PATH:/opt/nvim-linux64/bin" # nvim
+export PATH="$PATH:~/.local/lib/python3.11/site-packages/"
+export PATH="$PATH:~/.local/bin/"
 
 # Coloured warnings for GCC
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Format for time 
+# Format for time
 export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
 
 # # Bash configs

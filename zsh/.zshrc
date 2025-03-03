@@ -103,9 +103,9 @@ fi
 
 # Forces cursor to vertical bar 
 # Fixes bug with vim/nvim
-echo '\e[5 q'
+# Reset cursor to blinking vertical line after any command
+precmd() { echo -ne "\e[6 q" }
 
-# Source all shell files from ~/dotfiles/shell/
 # Source generic alias definitions
 if [ -f "$HOME/dotfiles/shell/alias.sh" ]; then
 	source "$HOME/dotfiles/shell/alias.sh"
