@@ -4,6 +4,7 @@
 export PATH="$PATH:/opt/nvim-linux64/bin" # nvim
 export PATH="$PATH:${HOME}/.local/lib/python3.11/site-packages"
 export PATH="$PATH:${HOME}/.local/bin"
+export PATH="$PATH:${HOME}/.cargo/bin"
 
 # Coloured warnings for GCC
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
